@@ -28,14 +28,14 @@ export async function POST(req: Request) {
     openai.apiKey = previewToken
   }
 
-  const res = await openai.chat.completions.create({
+  const completions = await openai.chat.completions.create({
     model: 'gpt-3.5-turbo',
     messages,
     temperature: 0.7,
     stream: false
   })
 
-  const completion = res.choices[0]
+  const completion = completions.choices[0]
   console.log(completion)
   const title = completion.messages[0].content.substring(0, 100)
   const id = completion.id ?? nanoid()
@@ -61,5 +61,5 @@ export async function POST(req: Request) {
     member: `chat:${id}`
   })
 
-  return res
+  return Response.json(completion)
 }
