@@ -37,8 +37,8 @@ export async function POST(req: Request) {
 
   const completion = completions.choices[0]
   console.log(completion)
-  const title = completion.messages[0].content.substring(0, 100)
-  const id = completion.id ?? nanoid()
+  const title = completion.message.content?.substring(0, 100)
+  const id = nanoid()
   const createdAt = Date.now()
   const path = `/chat/${id}`
   const payload = {
