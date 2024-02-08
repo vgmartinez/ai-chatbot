@@ -36,7 +36,6 @@ export async function POST(req: Request) {
   })
 
   const completion = completions.choices[0]
-  console.log(completion)
   const title = completion.message.content?.substring(0, 100)
   const id = nanoid()
   const createdAt = Date.now()
@@ -61,5 +60,5 @@ export async function POST(req: Request) {
     member: `chat:${id}`
   })
 
-  return Response.json(completions)
+  return Response.json(completion.message)
 }
