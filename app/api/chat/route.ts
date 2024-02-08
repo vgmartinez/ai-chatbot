@@ -49,7 +49,7 @@ export async function POST(req: Request) {
     messages: [
       ...messages,
       {
-        content: completion,
+        content: completion.message.content,
         role: 'assistant'
       }
     ]
