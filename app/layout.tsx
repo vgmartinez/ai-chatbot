@@ -36,6 +36,15 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script 
+        src="https://unpkg.com/@neuraltrust/nt.js@1.0.41" 
+        data-token="test" 
+        data-llm-endpoint="us-central1-neuraltrust-app-dev.cloudfunctions.net/neuraltrust-demo-api/v1/chat"
+        data-res-prompt="message"
+        data-req-prompt="prompt"
+      >
+      </head>
       <body
         className={cn(
           'font-sans antialiased',
