@@ -60,5 +60,5 @@ export async function POST(req: Request) {
     member: `chat:${id}`
   })
 
-  return Response.json(completion.message)
+  return Response.json({...completion.message})
 }
