@@ -38,11 +38,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <Script 
-        src="https://unpkg.com/@neuraltrust/nt.js@1.0.41" 
+        src="https://unpkg.com/@neuraltrust/nt.js@1.0.42" 
         data-token="test" 
-        data-llm-endpoint="us-central1-neuraltrust-app-dev.cloudfunctions.net/neuraltrust-demo-api/v1/chat"
-        data-res-prompt="message"
-        data-req-prompt="prompt"
+        data-llm-endpoint="ai-chatbot-o53syvjs8-vgmartinez.vercel.app/api/chat"
+        data-answer-field="messages"
+        data-ask-field=""
         ></Script>
       </head>
       <body
