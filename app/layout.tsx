@@ -39,7 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head>
         <Script 
           src="https://unpkg.com/@neuraltrust/nt.js@1.0.68" 
-          data-token="649fa6a78624de68f65e0fb816a309285aabe2633d0c06ccfe6baef9ba51d5bc" 
+          data-token="40dd03525ad8ef569082a786878fcf0d018178fd3fe962ad3757495b463668a0" 
           data-llm-endpoint="ai-chatbot-o53syvjs8-vgmartinez.vercel.app"
           data-llm-path="/api/chat"
           data-response-field="content"
