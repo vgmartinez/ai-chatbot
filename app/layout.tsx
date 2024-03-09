@@ -38,7 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <Script 
-          src="https://unpkg.com/@neuraltrust/nt.js@1.0.69" 
+          src="https://unpkg.com/@neuraltrust/nt.js@1.0.70" 
           data-token="40dd03525ad8ef569082a786878fcf0d018178fd3fe962ad3757495b463668a0" 
           data-llm-endpoint="ai-chatbot-o53syvjs8-vgmartinez.vercel.app"
           data-llm-path="/api/chat"
