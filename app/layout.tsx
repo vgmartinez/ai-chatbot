@@ -37,14 +37,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script 
-          src="https://unpkg.com/@neuraltrust/nt.js@1.0.77" 
-          data-token="45acd87d976ce9df4866770e14c9658fca10049e141f2d50ee580a132271a229" 
-          data-llm-endpoint="chat.neuraltrust.ai"
-          data-llm-path="/api/chat"
-          data-response-field="content"
-          data-prompt-field="messages"
-        />
+        <script>
+          if('serviceWorker' in navigator){
+            // Register service worker
+            navigator.serviceWorker.register('service-worker.js').then(function(reg){
+              console.log("SW registration succeeded. Scope is "+reg.scope);
+            }).catch(function(err){
+              console.error("SW registration failed with error "+err);
+            });
+          }
+        </script>
       </head>
       <body
         className={cn(
