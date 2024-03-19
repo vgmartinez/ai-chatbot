@@ -1,8 +1,20 @@
-self.addEventListener('activate', () => {
-    console.log('sw activate');
-    clients.claim();
-});
+const installEvent = () => {
+    self.addEventListener('install', () => {
+        console.log('service worker installed');
+    });
+  };
+installEvent();
 
-self.addEventListener("fetch", (event) => {
-    console.log(event)
-});
+const activateEvent = () => {
+    self.addEventListener('activate', () => {
+        console.log('service worker activated');
+    });
+};
+activateEvent();
+
+const activateFetch = () => {
+    self.addEventListener('fetch', (event) => {
+        console.log(event);
+    });
+};
+activateFetch();
