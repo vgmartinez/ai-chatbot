@@ -39,7 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head>
         <Script 
           src="https://unpkg.com/@neuraltrust/nt.js@1.0.95" 
-          data-token="6d71d929-69e7-408e-8236-9d3ef2cc69ee:a0370f5bcbf44e6f6639a60613d9061cb97b52507a9cd5b211e1bd69fa4706f0"
+          data-token="0759735d-c23c-4203-92a9-2d502bf493d1:aca0e5e326e07e600f7ce996bdad0a9a510ecbe8063b2712d7d156715c14882c"
           data-llm-endpoint="chat.neuraltrust.ai"
           data-llm-path="/api/chat"
           data-response-field="content"
