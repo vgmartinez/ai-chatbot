@@ -71,9 +71,18 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
             }
           }}
         >
-          {message.content}
+          {
+          (() => {
+            try {
+              const parsedContent = JSON.parse(message.content);
+              return parsedContent.content || message.content;
+            } catch (error) {
+              return message.content;
+              }
+            })()
+          }
         </MemoizedReactMarkdown>
-        <ChatMessageActions message={message} />
+        {message.role !== 'user' && <ChatMessageActions messageId={message.id} message={message} />}
       </div>
     </div>
   )
