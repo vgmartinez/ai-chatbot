@@ -38,7 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <Script 
-          src="https://unpkg.com/@neuraltrust/nt.js@1.0.99" 
+          src="https://unpkg.com/@neuraltrust/nt.js@1.2.0" 
           data-token="2c791514-7231-43d8-b9c1-66de366c09e9:4dbbc6a0ac805e7bdeccafa91a5506723ca8bd8e707f90b659b345ac6f7110af"
           data-llm-endpoint="chat.neuraltrust.ai"
           data-chat-path="/api/chat"
